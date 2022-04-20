@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fitsSystemWindows="true"
+    tools:context="com.one.hotspot.vpn.free.master.ui.HomeActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/backdarkg2c"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/home_bg"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <FrameLayout
+            app:layout_constraintTop_toBottomOf="@+id/app_bar"
+            android:id="@+id/changeServerlyt"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/server_back"
+            android:drawablePadding="@dimen/view_drawable_padding_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/changeServerlyt2"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/ivFlag"
+                    android:src="@drawable/ic_globe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="10dp" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/changeServer"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/ivFlag"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="20sp"
+                    android:drawablePadding="@dimen/view_drawable_padding_small"
+                    android:text="Fast Server"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#fff"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:rotation="180"
+                    android:id="@+id/arrow"
+                    android:src="@drawable/ic_back"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/noserver"
+                android:textSize="24sp"
+                android:text="@string/no_server_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changeServerlyt">
+
+            <com.skyfishjy.library.RippleBackground
+                android:layout_width="220dp"
+                android:id="@+id/ripple"
+                android:layout_height="220dp"
+                app:rb_color="@color/success_text"
+                app:rb_duration="5000"
+                app:rb_radius="28dp"
+                app:rb_rippleAmount="4"
+                app:rb_scale="3.5">
+                <com.skyfishjy.library.RippleBackground
+                    android:layout_width="220dp"
+                    android:id="@+id/ripple2"
+                    android:layout_height="220dp"
+                    app:rb_color="@color/darker_cement_grey"
+                    app:rb_duration="5000"
+                    app:rb_radius="28dp"
+                    app:rb_rippleAmount="4"
+                    app:rb_scale="3.5">
+
+                </com.skyfishjy.library.RippleBackground>
+
+                <ImageView
+                    android:id="@+id/connect_button"
+
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:padding="15dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/connect"
+                    app:srcCompat="@drawable/disconnected_icon" />
+
+            </com.skyfishjy.library.RippleBackground>
+
+
+            <TextView
+                android:id="@+id/vpn_connection_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/connect"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/round_background"
+                android:divider="@drawable/layout_divider_line"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/auto_protocol"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/auto"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:id="@+id/ikev2_protocol"
+
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/ikev2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <TextView
+                    android:id="@+id/udp_protocol"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/openvpn_udp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <TextView
+                    android:id="@+id/tcp_protocol"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/openvpn_tcp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            </LinearLayout>
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:visibility="gone"
+                android:id="@+id/nativeAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:gnt_template_type="@layout/gnt_small_template_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layout"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="26dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_promotion_fast" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Start Free Trial NOW"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No commitment. Cancel anytime"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

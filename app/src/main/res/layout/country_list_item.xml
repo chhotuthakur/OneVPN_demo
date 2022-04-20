@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Aza Codes (WhatsApp +923030839837) on 30/9/20 8:04 PM
+  ~ Copyright (c) 2020. All rights reserved by @Syzigo.
+  ~ Last modified 30/9/20 8:04 PM
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/country_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/server_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/server_back"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/country_flag"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/placeholder_country"
+            android:src="@drawable/ic_globe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginLeft="@dimen/margin_8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/country_flag"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/country_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/view_drawable_padding_small"
+                android:text="@string/placeholder_country"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:drawableRightCompat="@drawable/ic_keyboard_arrow_down" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_time_delay"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/signalLevel"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:layout_constraintEnd_toStartOf="@+id/selected_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_signal_full"/>
+
+        <ImageView
+            android:id="@+id/selected_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_choice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/server_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:paddingStart="@dimen/margin_4dp"
+        android:paddingEnd="@dimen/margin_4dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:fadeScrollbars="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/layout_divider"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_8dp"
+        android:paddingRight="@dimen/margin_8dp"
+        android:showDividers="middle|end">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/premiumFeatureViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fitsSystemWindows="true"
+                app:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:layout_marginRight="@dimen/margin_16dp"
+                        android:gravity="start|center"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/close_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:src="@drawable/ic_close_grey"
+                            android:visibility="visible"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </FrameLayout>
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-16dp"
+            android:foregroundGravity="center"
+            app:dotsColor="@color/idle_dot"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="16dp"
+            app:dotsSpacing="4dp"
+            app:dotsWidthFactor="2.5"
+            app:progressMode="true"
+            app:selectedDotColor="@color/selected_dot">
+
+        </com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:layout_marginRight="@dimen/margin_8dp"
+            android:background="@drawable/white_background_bottom_corner"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/month_subscription_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:divider="@drawable/layout_divider_small"
+                android:orientation="vertical"
+                android:showDividers="middle|beginning">
+
+                <TextView
+                    android:id="@+id/month_sub_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/subscription_1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/month_sub_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/month"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/month_sub_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/subscription_1_month_total_cost"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/month_sub_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:background="@drawable/blue_background_bottom_left_corner"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/margin_8dp"
+                    android:paddingTop="@dimen/margin_16dp"
+                    android:paddingRight="@dimen/margin_8dp"
+                    android:paddingBottom="@dimen/margin_16dp"
+                    android:text="@string/subscription_monthly"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/yearly_subscription_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:divider="@drawable/layout_divider_small"
+                android:orientation="vertical"
+                android:showDividers="middle|beginning">
+
+                <TextView
+                    android:id="@+id/year_sub_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/subscription_12"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/year_sub_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/month"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/year_sub_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/subscription_12_month_total_cost"
+                    android:textColor="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/year_sub_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:background="@drawable/white_background_bottom_corner"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/year_sub_saving"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/pale_blue_light"
+                        android:gravity="center"
+                        android:text="@string/subscription_yearly_savings"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        android:id="@+id/year_sub_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/subscription_yearly"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/premiumButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/blue_round_background"
+            android:text="@string/get_premium_now"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <LinearLayout
+            android:id="@+id/trialLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/grey_round_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/start_free_trial_for_3_days"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/yearly_subscription_for_100_after_trial_ends"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subscription_terms"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subscription_terms_desc"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/termsConditionsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/colorBlue" />
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F2F4F8"
+    android:layout_height="match_parent"
+    tools:context="com.one.hotspot.vpn.free.master.ui.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg"
+        android:backgroundTint="@color/colorBlue"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/cross_icon"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.5"
+            android:src="@drawable/ic_back"
+            android:visibility="visible"
+            tools:ignore="ContentDescription"
+            app:tint="#000" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/layout_divider"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher_round"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <!--     <Button
+                 android:id="@+id/myAccount"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/my_account"
+                 style="@style/AppTheme.SettingsButton"/>-->
+
+           <!--  <Button
+                 android:id="@+id/upgradePlan"
+                 style="@style/AppTheme.SettingsButton"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/upgrade_my_plan"
+                 android:visibility="visible" />-->
+
+        <Button
+            android:id="@+id/appSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proxy Apps"
+            android:textColor="#000"
+            style="@style/AppTheme.SettingsButton" />
+
+        <Button
+            android:id="@+id/shareButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+
+            android:text="Share This App"
+            style="@style/AppTheme.SettingsButton" />
+
+        <Button
+            android:id="@+id/proxyApps"
+            style="@style/AppTheme.SettingsButton"
+            android:layout_width="match_parent"
+            android:textColor="#000"
+
+            android:layout_height="wrap_content"
+            android:text="@string/select_proxy_apps"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/contactUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+
+            android:text="Support"
+            style="@style/AppTheme.SettingsButton"/>
+
+        <Button
+            android:id="@+id/privacyPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy"
+            android:textColor="#000"
+
+            style="@style/AppTheme.SettingsButton"/>
+
+        <Button
+            android:id="@+id/aboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+
+            android:text="@string/about_us"
+            style="@style/AppTheme.SettingsButton"/>
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:visibility="gone"
+            android:background="@color/app_background"
+            android:id="@+id/fragLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

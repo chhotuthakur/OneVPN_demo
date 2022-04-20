@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application -->
+    <string name="app_name">One VPN</string>
+    <string name="profile_not_found">Profile not found</string>
+    <!-- Settings -->
+    <string name="permanent_notification_name">VPN connection state</string>
+    <string name="permanent_notification_description">Provides information about the VPN connection state and serves as permanent notification to keep the VPN service running in the background.</string>
+
+    <!-- Log view -->
+
+    <!-- VPN profile list -->
+
+    <!-- VPN profile details -->
+    <!-- Warnings/Notifications in the details view -->
+
+    <!-- Trusted certificate selection -->
+
+    <!-- VPN state fragment -->
+    <string name="state_connecting">Connecting&#8230;</string>
+    <string name="state_connected">Connected</string>
+    <string name="state_disconnecting">Disconnecting&#8230;</string>
+    <string name="state_disabled">No active VPN</string>
+
+    <!-- IMC state fragment -->
+
+    <!-- Remediation instructions -->
+
+    <!-- Dialogs -->
+    <string name="error_lookup_failed">Server address lookup failed</string>
+    <string name="error_unreachable">Server is unreachable</string>
+    <string name="error_peer_auth_failed">Verifying server authentication failed</string>
+    <string name="error_auth_failed">User authentication failed</string>
+    <string name="error_assessment_failed">Security assessment failed</string>
+    <string name="error_generic">Unspecified failure while connecting</string>
+    <string name="error_password_missing">Password unavailable</string>
+    <string name="error_certificate_unavailable">Client certificate unavailable</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="retry">Retry</string>
+
+    <!-- Quick Settings tile -->
+    <string name="auto">Auto</string>
+    <string name="ikev2">IKEv2</string>
+    <string name="openvpn_udp">OpenVPN\n(UDP)</string>
+    <string name="openvpn_tcp">OpenVPN\n(TCP)</string>
+    <string name="connect">Tap To Connect</string>
+    <string name="account_type">Account Type</string>
+    <string name="default_acount_type">Free</string>
+    <string name="devices">Devices</string>
+    <string name="valid_until">Valid Until</string>
+    <string name="my_account">My Account</string>
+    <string name="default_devices">1/1 Devices</string>
+    <string name="default_valid_until">XX.XX.XXXX</string>
+    <string name="restore_purchase">Restore Purchase</string>
+
+    <string name="premium_feature_fast">Fast</string>
+    <string name="premium_feature_fast_desc">Up to 1000Mb/s bandwidth to explore the world</string>
+    <string name="premium_feature_secure">Secure</string>
+    <string name="premium_feature_secure_desc">Transfer obfuscate traffic via encrypted tunnel</string>
+    <string name="premium_feature_unlimited">Unlimited</string>
+    <string name="premium_feature_unlimited_desc">Get unlimited bandwidth, speed and traffic</string>
+    <string name="premium_feature_no_logs">No Logs</string>
+    <string name="premium_feature_no_logs_desc">We will never store or share your access log</string>
+    <string name="premium_feature_anonymous">Anonymous</string>
+    <string name="premium_feature_anonymous_desc">Hide your IP, Anonymous surfing</string>
+    <string name="premium_feature_vip_servers">VIP Servers</string>
+    <string name="premium_feature_vip_servers_desc">5000+ servers around the world</string>
+    <string name="premium_feature_remove_ads">Remove Ads</string>
+    <string name="premium_feature_remove_ads_desc">Have fun surfing without annoying ads!</string>
+
+    <string name="subscription_terms">Subscription Terms</string>
+    <string name="subscription_terms_desc">
+        1. Subscription will be charged to your credit card through your Google account at confirmation of purchase.\n\n
+    2. Your subscription will automatically renew unless you cancelled at least 24 hours before the end of the current valid period.\n\n
+    3. To end a subscription, disable auto-renewal and allow the current period to end. It is not possible to cancel a subscription immediately.\n\n
+    4. Refunds are not available for unused portions of a subscription.</string>
+
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="get_premium_now">Get Premium Now</string>
+    <string name="start_free_trial_for_3_days">Start Free Trial for 3 days</string>
+    <string name="yearly_subscription_for_100_after_trial_ends">Yearly subscription for 100 after trial ends</string>
+
+    <string name="month">month</string>
+    <string name="subscription_1">1</string>
+    <string name="subscription_12">12</string>
+    <string name="subscription_1_month_total_cost">1,100.00</string>
+    <string name="subscription_12_month_total_cost">7,200.00</string>
+    <string name="subscription_monthly">1,100.00/mo</string>
+    <string name="subscription_yearly">600.00/mo</string>
+    <string name="subscription_yearly_savings">SAVE 45%</string>
+    <string name="placeholder_country">Country</string>
+    <string name="placeholder_time_delay">Time Delay</string>
+    <string name="upgrade_my_plan">Upgrade My Plan</string>
+    <string name="select_proxy_apps">Select Proxy Apps</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About us</string>
+    <string name="placeholder_ip">106.20.20.71</string>
+    <string name="help">Help</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+
+    <!--    Help QA Start-->
+    <string name="help_question_1">What is VPN?</string>
+    <string name="help_question_2">How does VPN work?</string>
+    <string name="help_question_3">Will VPN slow down my system or Internet connection?</string>
+    <string name="help_question_4">Why is my virtual IP detected to be from a different country than the one I choose?</string>
+    <string name="help_question_5">Changing Virtual Locations?</string>
+
+    <string name="help_answer_1">VPN stands for Virtual Private Network. The main purpose of our VPN service is to ensure your security and privacy. To do this, VPN encrypts the traffic you transmit over the network.</string>
+    <string name="help_answer_2">VPN adds a new network interface which functions exactly as if you are working with a direct Internet connection. However, your IP address is now different, and all your traffic is encrypted.; VPN enables a host computer to send and receive data across shared or public networks as if they are an inegral part of a private network, with all the functionality, security and management policies that private networks provide.</string>
+    <string name="help_answer_3">We do NOT decrease the connection speed for any of our users. No matter you are a free user or have purchased a subscription - we will provide you the maximum possible connection speed for the current conditions. However, the conditions for your connection may vary because of the current workload on the selected VPN server and the distance from you to the selected VPN server.</string>
+    <string name="help_answer_4">Most of the geo-location services, like WhatIsMyIP and SpeedTest, update their IP databases rarely. That is why your virtual IP address can be detected as if it is located in a different country than the one you choose.</string>
+    <string name="help_answer_5">To change your Virtual\n\nLocation:\n\nOn the home screen tap on the current Virtual Location to see all Virtual Location options.\n\nTap a country to change the Virtual Locations.</string>
+    <string name="quality_server">Quality Server</string>
+
+    <string name="notify_update_config_message">Update servers config..</string>
+    <string name="connect_success">Connect Success</string>
+    <string name="rate_us_message">Please Support Us by Give 5 Star Rating!</string>
+    <string name="privacy_policy_message">This app collects a limited amount of data to offer you a fast and reliable VPN service.\nExamples of information we collect when you use this app:\n\nDevice-specific information like OS version, hardware model and IP address to optimize our network connection to you and ensure quality of service.\n\nAggregated, anonymized activity data, to perform analytics on our service, share insights about usage, and to ensure you can reliably access certain websites or apps.\n\nTotal bandwidth consumed and time connected to our VPN service.\n\nPayment information and optional email, when you purchase a paid plan.\n\nFull details about the data we collect and how we process it are available in our <a href="file:///android_asset/privacy.html">Privacy Policy</a></string>
+    <string name="accept_and_continue">Accept and continue</string>
+    <string name="your_privacy_is_important">Your Privacy is Important</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="no_server_available">No Server Available</string>
+    <!--    Help QA Ends-->
+</resources>

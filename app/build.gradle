@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        applicationId 'com.one.hotspot.vpn.free.master'
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 101
+        versionName '3.0.3'
+        multiDexEnabled true
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'com.android.billingclient:billing:4.0.0'
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.android.gms:play-services-ads:19.3.0'
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+    implementation project(':nativetemplates')
+    implementation project(path: ':vpnLib')
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+    implementation 'com.pixplicity.easyprefs:library:1.9.0'
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    testImplementation 'junit:junit:4.13.1'
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
+    implementation 'org.jetbrains.anko:anko-common:0.9'
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.one.hotspot.vpn.free.master">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="org.strongswan.android.logic.MainApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.WebViewActivity"/>
+        <activity
+            android:name="com.one.hotspot.vpn.free.master.ui.PrivacyPolicyActivity"
+            android:noHistory="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.ConnectSuccessActivity" />
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.LocationActivity" />
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.HelpActivity" />
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.ChangeServerActivity" />
+        <activity
+            android:name="com.one.hotspot.vpn.free.master.ui.PremiumActivity"
+            android:theme="@style/AppTheme.WhiteStatusBar" />
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.CustomAdActivity" />
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.AccountActivity" />
+        <activity android:name="com.one.hotspot.vpn.free.master.ui.SettingsActivity" />
+        <activity
+            android:name="com.one.hotspot.vpn.free.master.ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.one.hotspot.vpn.free.master.ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.strongswan.android.ui.VpnProfileControlActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/AppTheme.NoActionBar.Translucent">
+            <intent-filter>
+                <action android:name="org.strongswan.android.action.START_PROFILE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.strongswan.android.action.DISCONNECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="org.strongswan.android.data.LogContentProvider"
+            android:authorities="org.strongswan.android.content.log"
+            android:exported="true">
+
+
+        </provider>
+
+        <service android:name="com.one.hotspot.vpn.free.master.util.service.ServerConfigService" />
+        <service
+            android:name="org.strongswan.android.logic.VpnStateService"
+            android:exported="false" />
+        <service
+            android:name="org.strongswan.android.logic.CharonVpnService"
+            android:exported="false"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+                android:value="true" />
+        </service>
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+                android:value="true" />
+        </service>
+        <service
+            android:name="com.one.hotspot.vpn.free.master.util.push.VpnFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

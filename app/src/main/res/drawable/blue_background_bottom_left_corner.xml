@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Aza Codes (WhatsApp +923030839837) on 27/9/20 11:58 PM
+  ~ Copyright (c) 2020. All rights reserved by @Syzigo.
+  ~ Last modified 27/9/20 11:58 PM
+  -->
+
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/sky_blue"
+        android:endColor="@color/pale_blue"
+        android:angle="0" />
+    <corners android:bottomLeftRadius="@dimen/margin_32dp" />
+</shape>

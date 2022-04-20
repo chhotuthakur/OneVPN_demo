@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorRed</color>
+    <color name="colorAccent">@color/colorBlue</color>
+
+    <color name="colorRed">#E52027</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#00669D</color>
+    <color name="error_text">#D9192C</color>
+    <color name="warning_text">#FF9909</color>
+    <color name="success_text">#99CC00</color>
+    <color name="app_background">#DBDCDF</color>
+    <color name="grey_purple_shade">#413D53</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorTextYellow">#E7DB82</color>
+    <color name="selected_dot">#919BA0</color>
+    <color name="idle_dot">#3B416A</color>
+    <color name="sky_blue">#2F72FD</color>
+    <color name="pale_blue">#64A9FD</color>
+    <color name="pale_blue_light">#97C6FF</color>
+    <color name="darker_cement_grey">#949CA9</color>
+    <color name="lighter_cement_grey">#C0C5CD</color>
+
+    <color name="ping_text_red_color">#F44336</color>
+    <color name="ping_text_yellow_color">#FFEB3C</color>
+    <color name="ping_text_green_color">#4CAF50</color>
+
+
+
+
+
+
+    <!--<color name="colorGrey">#868686</color>-->
+
+    <color name="colorblack">#000000</color>
+    <color name="colorgreen">#59bc6b</color>
+
+
+    <color name="colorPrimaryLights">#343434</color>
+
+
+    <color name="colorDivider">#14383E4A</color>
+    <color name="gray_mid">#c5c5c5</color>
+
+
+
+    <color name="panel_background">#444444</color>
+
+
+    <!--<color name="colorblack">#101010</color>-->
+
+    <color name="middleLayerLayout">#252525</color>
+    <color name="upperLayerLayout">#363636</color>
+
+    <color name="dark">#7B7B7B</color>
+    <color name="text_green_ligth">#CEE6D1</color>
+    <color name="text_color">#626262</color>
+    <color name="black">#000000</color>
+    <color name="ligth">#DEE5EB</color>
+
+    <color name="ligth_white">#666666</color>
+
+    <color name="contentBodyColor">#FCFCFC</color>
+
+    <color name="greenButton">#28bfab</color>
+
+
+    <color name="adRandomColor1">#75C24C</color>
+    <color name="adRandomColor2">#ff8000</color>
+    <color name="adRandomColor3">#e6390e</color>
+    <color name="adRandomColor4">#5589F1</color>
+    <color name="adRandomColor5">#FF00DE</color>
+    <color name="adRandomColor6">#99008f</color>
+    <color name="adRandomColor7">#00A680</color>
+</resources>

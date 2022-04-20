@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Aza Codes (WhatsApp +923030839837) on 30/9/20 11:55 PM
+  ~ Copyright (c) 2020. All rights reserved by @Syzigo.
+  ~ Last modified 30/9/20 11:55 PM
+  -->
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/margin_4dp"/>
+</shape>
